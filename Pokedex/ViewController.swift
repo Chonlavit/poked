@@ -13,29 +13,59 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    var pokemon = [Pokemon]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        parsePokemonCSV()
         
         
     }
     
     let charmander = Pokemon(name: "Charmander", pokedexId: 6)
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func parsePokemonCSV(){
+        
+        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
+        
+        do {
+            
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            
+            for row in rows {
+            
+                let pokeId = Int(row["id"]!)!
+                let name = row["identifier"]!
+                
+                let poke = Pokemon(name: name, pokedexId: pokeId)
+                pokemon.append(poke)
+            }
+        
+        }catch let err as NSError{
+            
+            print(err.debugDescription)
+            
+        
+        }
+    
+    
     }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return pokemon.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PokeCell{
             
-            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row)
+            let poke = pokemon[indexPath.row]
+//            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row)
             
-            cell.configureCell(pokemon: pokemon)
+            cell.configureCell(poke)
+            
             
         return cell
             

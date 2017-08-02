@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C77469FD1F31D1040076972E /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77469FC1F31D1040076972E /* csv.swift */; };
 		C77BC5341F306CDC003FD813 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = C77BC5331F306CDC003FD813 /* pokemon.csv */; };
 		C77BC5371F306F14003FD813 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77BC5361F306F14003FD813 /* Pokemon.swift */; };
 		C77BC53A1F308873003FD813 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77BC5391F308873003FD813 /* PokeCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C77469FC1F31D1040076972E /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		C77BC5331F306CDC003FD813 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		C77BC5361F306F14003FD813 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		C77BC5391F308873003FD813 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				C7C51DC11F2F234E00F2F562 /* Main.storyboard */,
 				C7C51DC71F2F234E00F2F562 /* Assets.xcassets */,
 				C77BC5331F306CDC003FD813 /* pokemon.csv */,
+				C77469FC1F31D1040076972E /* csv.swift */,
 				C7C51DC91F2F234E00F2F562 /* LaunchScreen.storyboard */,
 				C7C51DCC1F2F234E00F2F562 /* Info.plist */,
 				C7C51DC41F2F234E00F2F562 /* Pokedex.xcdatamodeld */,
@@ -124,6 +127,7 @@
 				TargetAttributes = {
 					C7C51DB91F2F234E00F2F562 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -165,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C77469FD1F31D1040076972E /* csv.swift in Sources */,
 				C7C51DC01F2F234E00F2F562 /* ViewController.swift in Sources */,
 				C77BC5371F306F14003FD813 /* Pokemon.swift in Sources */,
 				C7C51DC61F2F234E00F2F562 /* Pokedex.xcdatamodeld in Sources */,
