@@ -95,6 +95,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        var poke: Pokemon!
+        if inSearchMode{
+        
+            poke = fileredPokemon[indexPath.row]
+        
+        }else{
+        
+            poke = pokemon[indexPath.row]
+        
+        }
+        
+        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 105, height:  105)
@@ -124,6 +140,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailVC"{
+            if let detailVC = segue.destination as? PokemonDetailVC{
+                if let poke = sender as? Pokemon{
+                detailVC.pokemon = poke
+                }
+            
+            }
+        
+        
+        }
     }
 
 
