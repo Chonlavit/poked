@@ -48,7 +48,7 @@
                                     <constraint firstItem="KBA-sI-7v9" firstAttribute="centerX" secondItem="oto-EU-vYv" secondAttribute="centerX" id="juE-Up-xvt"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="6kX-sP-QnJ">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Shearch Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="6kX-sP-QnJ">
                                 <rect key="frame" x="0.0" y="65" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Jik-Ce-N25"/>
@@ -136,6 +136,7 @@
                     </view>
                     <connections>
                         <outlet property="myCollectionView" destination="P9O-mF-2C7" id="Zbx-x7-6ba"/>
+                        <outlet property="mySearchBar" destination="6kX-sP-QnJ" id="CAg-wC-mLR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
